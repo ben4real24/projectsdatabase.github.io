@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tracking - Best Shipping & Logistics</title>
+  <style>
+    :root {
+      --brand: #9370DB;   /* Medium Purple */
+      --ink: #333;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+      background: #f9f9f9;
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #d2b48c !important; /* Light brown */
+      padding: 15px 30px;
+      color: #000 !important;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #000;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url("images/logistics.jpg.") no-repeat center center/cover;
+      height: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 2em;
+      font-weight: bold;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    }
+
+    /* Tracking Section */
+    .tracking-section {
+      max-width: 700px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .tracking-section h2 {
+      margin-bottom: 15px;
+      color: #8B4513;
+    }
+
+    .tracking-form {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .tracking-form input {
+      flex: 1;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+
+    .tracking-form button {
+      padding: 12px 20px;
+      background: var(--ink);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .tracking-form button:hover {
+      background: var(--brand);
+    }
+
+    /* Tracking Result */
+    .result-box {
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      background: #f4f4f4;
+      border: 1px solid #ddd;
+      display: none;
+      text-align: left;
+    }
+
+    .result-box h3 {
+      margin-top: 0;
+      color: var(--ink);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Best Shipping & Logistics</h1>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    Track Your Shipment
+  </section>
+
+  <!-- Tracking Section -->
+  <section class="tracking-section">
+    <h2>Enter Your Tracking Number</h2>
+    <form class="tracking-form" onsubmit="trackPackage(event)">
+      <input type="text" id="trackingNumber" placeholder="e.g. BSL123456789" required>
+      <button type="submit">Track</button>
+    </form>
+
+    <!-- Tracking Result -->
+    <div class="result-box" id="resultBox">
+      <h3>Tracking Result</h3>
+      <p id="trackingResult">Your tracking details will appear here.</p>
+    </div>
+  </section>
+
+  <script>
+    function trackPackage(event) {
+      event.preventDefault();
+      const trackingNumber = document.getElementById("trackingNumber").value;
+      const resultBox = document.getElementById("resultBox");
+      const trackingResult = document.getElementById("trackingResult");
+
+      // Fake demo response (replace with real API later)
+      trackingResult.textContent = 
+        `Tracking Number: ${trackingNumber}\nStatus: In Transit\nEstimated Delivery: 3-5 business days.`;
+
+      resultBox.style.display = "block";
+    }
+  </script>
+</body>
+</html>

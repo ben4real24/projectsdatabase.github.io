@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services - Best Shipping & Logistics</title>
+  <style>
+    :root {
+      --brand: #9370DB;   /* Medium Purple */
+      --ink: #333;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #d2b48c !important; /* Light brown */
+      padding: 15px 30px;
+      color: #000 !important;
+    }
+
+    header h1 {
+      color: #000;
+      margin: 0;
+    }
+
+    .search-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .search-input {
+      display: none;
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .search-btn {
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    /* Top Topics Section */
+    .topics {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      padding: 40px 20px;
+      background: #f9f9f9;
+    }
+
+    .topic {
+      position: relative;
+      height: 250px;
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .topic:hover {
+      transform: translateY(-5px);
+    }
+
+    .topic .image {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .topic .overlay {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 15px;
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+      text-align: center;
+    }
+
+    .topic h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .topic p {
+      margin: 5px 0 0;
+      font-size: 14px;
+    }
+
+    /* Background Section */
+    .bg-section {
+      position: relative;
+      background: url("images/medium-bg.jpg") no-repeat center center/cover;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    /* Unique Service Section */
+    .unique {
+      padding: 50px 20px;
+      background: #fff;
+      text-align: center;
+    }
+
+    .unique h2 {
+      color: #8B4513;
+      margin-bottom: 20px;
+    }
+
+    .unique p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1em;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .close-btn {
+      background: #8B4513;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      margin-top: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Best Shipping & Logistics</h1>
+
+    <div class="search-container">
+      <button class="search-btn">🔍</button>
+      <input type="text" class="search-input" placeholder="Search...">
+    </div>
+  </header>
+
+  <!-- Top Topics -->
+  <section class="topics">
+    <div class="topic" data-info="We ensure reliable and quick delivery worldwide.">
+      <div class="image" style="background-image: url('images/logistics7.png');"></div>
+      <div class="overlay">
+        <h3>Fast Delivery</h3>
+        <p>Reliable and quick shipping across the globe.</p>
+      </div>
+    </div>
+    <div class="topic" data-info="Track your packages in real-time from dispatch to delivery.">
+      <div class="image" style="background-image: url('images/logistics8.png');"></div>
+      <div class="overlay">
+        <h3>Tracking</h3>
+        <p>Stay updated with real-time shipment tracking.</p>
+      </div>
+    </div>
+    <div class="topic" data-info="Our warehouses are equipped with secure storage facilities.">
+      <div class="image" style="background-image: url('images/logistics9.png');"></div>
+      <div class="overlay">
+        <h3>Warehousing</h3>
+        <p>Secure storage with advanced facilities.</p>
+      </div>
+    </div>
+    <div class="topic" data-info="Our dedicated team is available round the clock for assistance.">
+      <div class="image" style="background-image: url('images/logistics10.png');"></div>
+      <div class="overlay">
+        <h3>Customer Support</h3>
+        <p>24/7 dedicated support for all clients.</p>
+      </div>
+    </div>
+    <div class="topic" data-info="We have partnerships in over 100 countries worldwide.">
+      <div class="image" style="background-image: url('images/logistics11.png');"></div>
+      <div class="overlay">
+        <h3>Global Reach</h3>
+        <p>We deliver to over 100 countries worldwide.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Background Section -->
+  <section class="bg-section">
+    Excellence in Shipping & Logistics
+  </section>
+
+  <!-- Unique Service Section -->
+  <section class="unique">
+    <h2>Why Our Service is Unique</h2>
+    <p>
+      At Best Shipping & Logistics, we don’t just move packages – 
+      we move businesses forward. Our commitment to speed, 
+      transparency, and personalized solutions sets us apart. 
+      With advanced tracking, global partnerships, and 
+      customer-first support, we deliver trust alongside every shipment.
+    </p>
+  </section>
+
+  <!-- Modal Popup -->
+  <div class="modal" id="infoModal">
+    <div class="modal-content">
+      <p id="modalText"></p>
+      <button class="close-btn">Close</button>
+    </div>
+  </div>
+
+  <script>
+    // Toggle search input
+    const searchBtn = document.querySelector(".search-btn");
+    const searchInput = document.querySelector(".search-input");
+
+    searchBtn.addEventListener("click", () => {
+      searchInput.style.display = 
+        searchInput.style.display === "inline-block" ? "none" : "inline-block";
+      searchInput.focus();
+    });
+
+    // Modal functionality for topics
+    const topics = document.querySelectorAll(".topic");
+    const modal = document.getElementById("infoModal");
+    const modalText = document.getElementById("modalText");
+    const closeBtn = document.querySelector(".close-btn");
+
+    topics.forEach(topic => {
+      topic.addEventListener("click", () => {
+        modalText.textContent = topic.getAttribute("data-info");
+        modal.style.display = "flex";
+      });
+    });
+
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    // Close modal if clicking outside
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>
